@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Blk Men Code</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.blackmencode.com.blackmencodeapp</string>
+	<string>com.blackmencode.com</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
