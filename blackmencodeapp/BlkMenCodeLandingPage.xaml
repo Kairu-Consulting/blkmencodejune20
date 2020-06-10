@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="blackmencodeapp.BlkMenCodeLandingPage">
+     <ContentPage.Content>
+                        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+             <StackLayout 
+                    HorizontalOptions="CenterAndExpand"
+                    Grid.Row="0"
+                    Margin="0,100,0,0">
+
+                  <Image Source="smalllogo.png" />
+
+                <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand">
+                  <Label FontSize="Small" 
+                         TextColor="White"
+                         LineBreakMode="NoWrap"
+                         VerticalTextAlignment="Center"
+                         Margin="0,40,0,0"
+                         Grid.Row="2"
+                         x:Name="largeAAP">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="" FontAttributes="Bold" FontSize="40">
+                                        <Span.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="iOS" Value="Gudea" />
+                                                <On Platform="Android" Value="Gudea.otf#Gudea" />
+                                            </OnPlatform>
+                                        </Span.FontFamily>
+                                    </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                 </StackLayout>
+
+                <ActivityIndicator x:Name="testIndicator" 
+                                   BackgroundColor="Transparent"
+                                   Color="White"
+                                   IsRunning="{Binding IsBusy}"
+                                   IsVisible="{Binding IsBusy}"
+                                   HeightRequest="400"
+                                   WidthRequest="400"
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="Center" />
+            </StackLayout>
+
+            
+
+            <StackLayout Grid.Row="4" 
+                         x:Name="NewStackLayout" 
+                         WidthRequest="150" 
+                         BackgroundColor="Transparent" 
+                         VerticalOptions="End" 
+                         HorizontalOptions="Start" 
+                         Margin="40,10,0,25">
+
+                        <Button
+                            Text="I'm New"
+                            IsVisible="{Binding isVisibleForUse}"
+                            Command="{Binding ImNewCommand}"
+                            HorizontalOptions="StartAndExpand"
+                            x:Name="newButton" />       
+            </StackLayout>
+
+            <StackLayout Grid.Row="4" 
+                         x:Name="SignInStack" 
+                         WidthRequest="150" 
+                         BackgroundColor="Transparent" 
+                         HorizontalOptions="End" 
+                         VerticalOptions="EndAndExpand" 
+                         Margin="0,10,40,25">
+
+                        <Button
+                           Text="Sign In"
+                           IsVisible="{Binding isVisibleForUse}"
+                           HorizontalOptions="EndAndExpand"
+                           Command="{Binding SignInCommand}"
+                           x:Name="signInButton" />
+
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

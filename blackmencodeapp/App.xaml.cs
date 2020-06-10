@@ -10,7 +10,7 @@ namespace blackmencodeapp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new BlkMenCodeLandingPage();
         }
 
         protected override void OnStart()
