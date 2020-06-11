@@ -27,5 +27,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)BlkMenCodeLandingPage.xaml.cs">
       <DependentUpon>BlkMenCodeLandingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)viewModel\LandingPageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)viewModel\" />
   </ItemGroup>
 </Project>

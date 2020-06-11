@@ -39,6 +39,18 @@
                     </Label>
                  </StackLayout>
 
+                <Label
+                    Margin="20,0,0,0"
+                    Text="{Binding persons_name}" />
+
+                 <Button Clicked="Button_Clicked" Text="Click Me" />
+
+                 <Switch x:Name="testSwitch"
+                         Margin="25,0,0,0"
+                         OnColor="Blue"
+                         IsEnabled="True"
+                         Toggled="testSwitch_Toggled" />
+
                 <ActivityIndicator x:Name="testIndicator" 
                                    BackgroundColor="Transparent"
                                    Color="White"
@@ -80,7 +92,7 @@
                            Text="Sign In"
                            IsVisible="{Binding isVisibleForUse}"
                            HorizontalOptions="EndAndExpand"
-                           Command="{Binding SignInCommand}"
+                           Clicked="Button_Clicked"
                            x:Name="signInButton" />
 
             </StackLayout>
